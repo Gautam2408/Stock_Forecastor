@@ -1,0 +1,108 @@
+{% extends "pred_app/base.html" %}
+{% load static %}
+{% block nav %}
+<li>
+    <a href="/pred_app/index">
+        Home
+    </a>
+</li>
+<li class="active" style="border-radius: 50%;">
+    <a href="/pred_app/index">
+        Prediction
+    </a>
+</li>
+<li>
+    <a href="/pred_app/chart">
+        Chart
+    </a>
+</li>
+<li>
+    <a href="/pred_app/contact">
+        Contact Us
+    </a>
+</li>
+{% endblock nav %}
+{% block content %}
+<div class="content">
+    <img alt="" style="padding-left: 10%; height:40%;  width:50%;" src="https://thelinknewspaper.ca/images/articles/Volume_36/Special/_resized/mediadem.polls.LauraLalonde.gif"/>
+    <div class="sidebar">
+        <br>
+            <br>
+                <br>
+        <div class="gadget" style="width: 300;">
+            <form action="http://www.google.com/search" target="_blank" method="get" style="padding-left: 5%;">
+                <input maxlength="255" name="q" size="25" type="text" value=""/>
+                <input type="submit" value="Search Web" style="padding-left: 2%;"/>
+            </form>
+        </div>
+    </div>
+    <div class="form-group col-sm-6 col-sm-offset-1" style="float: right; width: 50%;">
+        <br>
+        <h2 align="center" style="border:3px solid Red; background: #bfa0b8;font-style: italic ;" title="this is heading">
+            <b>Company for Technical Analysis</b>
+        </h2>
+        <form align="right" class="" id="search">
+            <input class="form-control typeahead1" data-url2="{% static 'pred_app/data/stock2.json' %}" data-url="{% static 'pred_app/data/stock.json' %}" id="typeahead1" placeholder="Search Stock Symbol..." type="text" />
+        </form>
+    </div>
+    <br>
+        <br>
+            <br>
+                <br>
+                    <br>
+                        <br>
+                            <br>
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container" style="float: right; margin: 0 3%;">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/symbols/NASDAQ-AAPL/technicals/" rel="noopener" target="_blank"><span class="blue-text">Technical Analysis for AAPL</span></a> by TradingView</div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+        {
+        "interval": "1m",
+        "width": 425,
+        "isTransparent": false,
+        "height": 450,
+        "symbol": "{{se}}:{{stock_symbol}}",
+        "showIntervalTabs": true,
+        "locale": "in",
+        "colorTheme": "dark"
+        }
+        </script>
+    </div>
+    <!-- TradingView Widget END -->
+    <br>
+        <br>
+            <br>
+                <br>
+    <div class="form-group col-sm-6 col-sm-offset-1" style="width: 50%;">
+        <div class="xyz"  style="border:3px solid Red; text-align: center; background: #bfa0b8;" >
+            <br>
+            <h2 title="this is heading" style="font-style: italic ;">
+                <b>Get Your Predictions !</b>
+            </h2>
+            <h5 style="font-family:Verdana, Geneva, Tahoma, sans-serif;">
+                Believe me Future is only past again,just entered through another gate !
+            </h5>
+        </div>
+        <form align="right" class="" id="search">
+            <input class="form-control typeahead2" data-url2="{% static 'pred_app/data/stock2.json' %}" data-url="{% static 'pred_app/data/stock.json' %}" id="typeahead2" placeholder="Search Stock Symbol..." type="text" usr-url=""/>
+        </form>
+    </div>
+    <br>
+        <br>
+            <br>
+                <br>
+                    <br>
+                        <br>
+                            <br>
+                                <br>  
+                                    <br>
+                                        <br>
+                                            <br>
+                                                <br>
+                                                    <br>
+                                                        <br>
+                                                            <br> 
+                                                                <br>                    
+</div>
+{% endblock content %}
